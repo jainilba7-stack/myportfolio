@@ -175,10 +175,8 @@ function initContactForm() {
 
     try {
       // Determine backend API URL dynamically (targets port 5000 if opened via VS Code Live Preview port 3000)
-      const apiEndpoint =
-        window.location.port !== '5000' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.protocol === 'file:')
-          ? 'https://myportfolio-e6d4.onrender.com'
-          : '/api/contact';
+      const apiEndpoint = 'https://myportfolio-e6d4.onrender.com/api/contact'
+
 
       const response = await fetch(apiEndpoint, {
         method: 'POST',
